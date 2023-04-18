@@ -1,0 +1,40 @@
+* {
+  font-family: 'MaplestoryOTFBold';
+}
+.mypage {
+    position: relative;
+    background-color: #2B1D23;
+    width: 100%;
+    height: 100vh;
+    color: rgb(237, 241, 245);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.info {
+    margin: auto;
+    position: relative;;
+    border-radius: 5px;
+    background-color: #8B7F70;
+    width: 800px;
+    height: 750px;
+    padding: 20px;
+}
+
+.table{
+  font-size: 27px;
+  width: 100%;
+  height: 100%;
+}
+
+.table, tr, td {
+  /* border: 1px solid #444444; */
+}
+
+.mypagebtn {
+  position: absolute;
+  right: -115px;
+  top: 0px;
+}

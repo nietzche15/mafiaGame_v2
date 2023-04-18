@@ -1,0 +1,95 @@
+.chatNotice,
+.gameNotice,
+.gameNotice_Day,
+.gameNotice_Night {
+  text-align: center;
+  text-align: middle;
+  padding: 10px 0 10px 0;
+}
+.gameNotice {
+  color: whitesmoke;
+}
+.gameNotice > mark {
+  font-weight: bolder;
+  background-color: cadetblue;
+}
+.gameNotice_Day {
+  background-color: lavenderblush;
+}
+.gameNotice_Day > mark {
+  border-radius: 20%;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+.gameNotice_Night {
+  background-color: midnightblue;
+}
+.gameNotice_Night > mark {
+  border-radius: 20%;
+  background-color: transparent;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+#chatBox {
+  /* height: 900px; */
+  overflow-y: auto;
+}
+
+/* My Chat */
+.MyChatBox {
+  text-align: right;
+}
+.MyChatBox > div {
+  width: 50%;
+  padding-left: 20px;
+}
+.MyChatBox > .MyChat {
+  border-radius: 10px 10px 10px 10px;
+  text-align: left;
+  display: inline-block;
+  height: 50px;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
+  background-color: #e4d9c6;
+}
+.MyChatBox > .MyDM {
+  display: inline-block;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
+  background-color: lightpink;
+}
+
+/* Server Chat */
+
+.ServerChat {
+  text-align: start;
+  border-radius: 10px 10px 10px 10px;
+  height: 50px;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
+  background-color: #e4d9c6;
+  width: 50%;
+}
+/* Direct Chat */
+.DirectChat {
+  text-align: start;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
+  background-color: lightpink;
+  width: fit-content;
+}
+
+/* Chat Box 동일 항목 */
+#inputBox,
+#DMinputBox {
+  width: 600px;
+  margin: 0 !important;
+  position: absolute;
+  bottom: 0px;
+}
+
+#DMinputBox *,
+#inputBox * {
+  height: 60px;
+}
