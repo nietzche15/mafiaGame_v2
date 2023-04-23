@@ -62,7 +62,7 @@ export default function Chatting() {
           </Box>
         )}
 
-        <Box>
+        <Box sx={{ minHeight: '916px' }}>
           {messages.map((message) => (
             <Message
               key={message.id}

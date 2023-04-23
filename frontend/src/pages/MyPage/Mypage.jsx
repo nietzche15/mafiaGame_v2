@@ -21,9 +21,9 @@ export default function Mypage() {
   console.log(cookies.get('id1'));
   console.log(cookies.get('id2'));
   console.log(cookies.get('id3'));
-  const [email, setEmail] = useState(cookies.get('id1'));
-  const [img, setImg] = useState(cookies.get('id2'));
-  const [name, setName] = useState(cookies.get('id3'));
+  const [email, setEmail] = useState(cookies.get('userEmail'));
+  const [img, setImg] = useState(cookies.get('userImg'));
+  const [name, setName] = useState(cookies.get('userName'));
   const [open, setOpen] = React.useState(false);
   const [empty, setEmpty] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -43,16 +43,16 @@ export default function Mypage() {
     p: 4,
   };
 
-  const API = 'ec651559127139e56f9dc2e455e69667';
+  const API = '8e65d40a6fed897ee90bf659fad3e914';
   const logout = 'http://localhost:3000';
 
   function delcookies() {
-    cookies.remove('id1');
-    cookies.remove('id2');
-    cookies.remove('id3');
+    cookies.remove('userEmail');
+    cookies.remove('userImg');
+    cookies.remove('userName');
   }
   function kakaoLogout() {
-    window.location.href = `https://kauth.kakao.com/oauth/logout?client_id=${API}&logout_redirect_uri=${logout}`;
+    window.location.href = `https://kauth.kakao.com/oauth/logout?client_id=${process.env.REACT_APP_REST_API_KEY}&logout_redirect_uri=${process.env.REACT_APP_LOGOUT_REDIRECT_URI}`;
     delcookies();
   }
 
