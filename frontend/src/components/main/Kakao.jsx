@@ -13,7 +13,7 @@ export default function Kakao() {
     const clientId = 'ec651559127139e56f9dc2e455e69667';
     const redirect = 'http://localhost:3000/kakao';
     const res = await axios.post(
-      `https://kauth.kakao.com/oauth/token?grant_type=${grantType}&client_id=${clientId}&redirect_uri=${redirect}&code=${code}`,
+      `https://kauth.kakao.com/oauth/token?grant_type=${grantType}&client_id=${process.env.REACT_APP_REST_API_KEY}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&code=${code}`,
       {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -29,11 +29,11 @@ export default function Kakao() {
     // console.log(res2.data.kakao_account.email)
     // console.log(res2.data.properties.profile_image)
     console.log(res2);
-    cookies.set('id1', res2.data.kakao_account.email);
-    cookies.set('id2', res2.data.properties.profile_image);
-    cookies.set('id3', res2.data.properties.nickname);
+    cookies.set('userEmail', res2.data.kakao_account.email);
+    cookies.set('userImg', res2.data.properties.profile_image);
+    cookies.set('userName', res2.data.properties.nickname);
 
-    location.href = 'http://localhost:3000/lobby';
+    location.href = 'http://localhost:3002/lobby';
   }, []);
 
   return <div>.</div>;

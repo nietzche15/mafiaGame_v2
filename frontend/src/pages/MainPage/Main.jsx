@@ -3,9 +3,10 @@ import React from 'react';
 import GlobalStyle from '../../components/common/GlobalStyle';
 import Rules from '../../components/main/Rules';
 import '../../components/styles/main.css';
+import SignIn from '../../components/main/SignIn';
 
 export default function Main() {
-  const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_REST_API_KEY}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&response_type=code&scope=openid,profile_image,account_email,profile_nickname`;
+  const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_APP_REST_API_KEY}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&response_type=code&scope=profile_image,account_email,profile_nickname`;
 
   const kakaoLogin = () => {
     window.location.href = KAKAO_AUTH_URL;
@@ -97,6 +98,7 @@ export default function Main() {
               </Box>
             </Box>
             <Rules />
+            <SignIn />
           </Box>
         </Box>
       </Box>

@@ -19,9 +19,9 @@ export default function LobbyChat() {
   const handleChange = (event) => setValue(event.target.value);
   const dispatch = useDispatch();
 
-  let userEmail = cookies.get('id1');
-  let userImg = cookies.get('id2');
-  let userName = cookies.get('id3');
+  let userEmail = cookies.get('userEmail');
+  let userImg = cookies.get('userImg');
+  let userName = cookies.get('userName');
 
   useEffect(() => {
     socket.on('noticeLB', (data) => {
