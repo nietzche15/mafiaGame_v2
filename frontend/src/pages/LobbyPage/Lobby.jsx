@@ -43,9 +43,9 @@ export default function Lobby() {
   };
   const roomName = useRef();
   const roomPW = useRef();
-  let userEmail = cookies.get('id1');
-  let userImg = cookies.get('id2');
-  let userName = cookies.get('id3');
+  let userEmail = cookies.get('userEmail');
+  let userImg = cookies.get('userImg');
+  let userName = cookies.get('userName');
   console.log('socket', socket.id);
 
   console.log('userInfo: ', userEmail, userImg, userName);
@@ -171,10 +171,9 @@ export default function Lobby() {
               <span className="gameNoP">1/7</span>
             </div>
           </div> */}
-          <div style={{overflowY:'scroll',height:'400px'}}>
-            <GameRoom />
-          </div>
-            
+            <div style={{ overflowY: 'scroll', height: '400px' }}>
+              <GameRoom />
+            </div>
 
             <div className="right">
               <Button

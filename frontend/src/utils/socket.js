@@ -1,7 +1,8 @@
 import { io } from 'socket.io-client';
 
-export const socket = io('http://localhost:7070', {
+export const socket = io(`${process.env.REACT_APP_HOST}`, {
   cors: { origin: '*' },
+  // path: '/socket.io/',
   transports: ['websocket'],
 });
 

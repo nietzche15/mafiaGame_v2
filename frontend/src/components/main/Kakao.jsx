@@ -33,7 +33,7 @@ export default function Kakao() {
     cookies.set('userImg', res2.data.properties.profile_image);
     cookies.set('userName', res2.data.properties.nickname);
 
-    location.href = 'http://localhost:3002/lobby';
+    location.href = 'https://playmafiagame.shop/lobby';
   }, []);
 
   return <div>.</div>;
