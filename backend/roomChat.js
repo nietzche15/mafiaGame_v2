@@ -4,6 +4,7 @@ module.exports = (server) => {
       origin: '*',
       credentials: true,
     },
+    // path: '/socket.io/',
   });
 
   let cnt = 2;

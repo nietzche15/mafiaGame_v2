@@ -12,7 +12,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.3.2",
-    "concurrently": "^8.0.1",
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
@@ -37,8 +36,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "backend": "cd ../backend && nodemon index --prefix backend",
-    "dev": "concurrently \"npm run backend\" \"npm run start\"",
     "deploy": "nohup serve -s build &"
   },
   "browserslist": {

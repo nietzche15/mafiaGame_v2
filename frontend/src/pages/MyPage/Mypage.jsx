@@ -18,9 +18,9 @@ import GlobalStyle from '../../components/common/GlobalStyle';
 
 export default function Mypage() {
   const cookies = new Cookies();
-  console.log(cookies.get('id1'));
-  console.log(cookies.get('id2'));
-  console.log(cookies.get('id3'));
+  console.log('userEmail', cookies.get('userEmail'));
+  console.log('userImg', cookies.get('userImg'));
+  console.log('userName', cookies.get('userName'));
   const [email, setEmail] = useState(cookies.get('userEmail'));
   const [img, setImg] = useState(cookies.get('userImg'));
   const [name, setName] = useState(cookies.get('userName'));
