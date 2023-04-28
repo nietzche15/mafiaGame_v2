@@ -17,8 +17,8 @@ const ca = fs.readFileSync(
   'utf-8'
 );
 
-// const privateKey = fs.readFileSync('./encrypt/privkey.pem', 'utf-8');
-// const certificate = fs.readFileSync('./encrypt/cert.pem', 'utf-8');
+// const privateKey = fs.readFileSync('./encrypt/cert.key', 'utf-8');
+// const certificate = fs.readFileSync('./encrypt/cert.crt', 'utf-8');
 // const ca = fs.readFileSync('./encrypt/chain.pem', 'utf-8');
 
 const credentials = {
@@ -27,30 +27,22 @@ const credentials = {
   ca: ca,
 };
 
-// const https = require('https').createServer(credentials, app);
+const https = require('https').createServer(credentials, app);
 console.log('key: ', privateKey);
 require('./roomChat')(https);
-const http = require('http').createServer(app);
+// const http = require('http').createServer(app);
 // require('./roomChat')(http);
 
 // app.set('trust proxy', true);
 
 app.get('/', (req, res) => {
-  var json = {
-    host: req.hostname,
-    ip: req.ips,
-    header: req.rawHeaders,
-    body: req.body,
-    cookies: req.cookies,
-  };
-  console.log('app json: ', json);
-  res.send(json);
+  res.status(200).send('Server');
 });
 
-http.listen(process.env.PORT, () => {
-  console.log('Server port : ', 80);
-});
-
-// https.listen(port, () => {
-//   console.log('Server port : ', port);
+// http.listen(port, () => {
+//   console.log('HTTP Server port : ', port);
 // });
+
+https.listen(port, () => {
+  console.log('HTTPS Server port : ', port);
+});
